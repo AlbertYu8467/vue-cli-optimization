@@ -1,32 +1,72 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <layoutHead>
+      <template v-slot:logo>
+        <img src="/images/logo.jpg" alt="logo">
+      </template>
+      <template v-slot:nav>
+        <ul class="flex-align-center">
+          <router-link tag="li" v-for="value in menus" 
+          :key="value.path" :to="value.path">{{value.name}}</router-link>
+        </ul>
+      </template>
+      <template v-slot:login>
+        <div class="login" v-if="userInfo.name">{{userInfo.name}}</div>
+        <div class="login" v-else @click="login">登录</div>
+      </template>
+    </layoutHead>
+    <layoutMain></layoutMain>
+    <login ref="login"></login>
   </div>
 </template>
-
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+import { mapGetters } from 'vuex'
+import layoutHead from 'cps/common/layoutHead'
+import layoutMain from 'cps/common/layoutMain'
+import login from 'cps/Login'
+export default {
+  components:{
+    layoutHead,
+    layoutMain,
+    login
+  },
+  data(){
+    return {
+      menus:[
+        {name:'首页',path:'/home'},
+        {name:'项目',path:'/project'},
+      ]
+    }
+  },
+  computed:{
+    ...mapGetters(['userInfo'])
+  },
+  methods:{
+    login(){
+      this.$refs.login.toggleVisible();
     }
   }
 }
+</script>
+<style lang="scss">
+img {
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+}
+ul {
+  margin-left: 30px; 
+  li {
+    line-height: $head-height;
+    padding: 0 25px;
+    cursor: pointer;
+    &:hover {
+      background: rgba(0,0,0,.2);
+    }
+  }
+}
+.login {
+  cursor: pointer;
+}
+
 </style>

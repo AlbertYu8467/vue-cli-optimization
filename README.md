@@ -1,5 +1,6 @@
 # vue-optimization
-
+### 1.使用CDN加速，减小编译时间和包的大小。
+### TODO 图片压缩、引入js打包优化
 ## Project setup
 ```
 npm install

@@ -1,0 +1,21 @@
+#app {
+  height: 100%;
+}
+.flex {
+  display: flex;
+}
+.flex-remain {
+  flex:1;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-around {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-align-center{
+  display: flex;
+  align-items: center;
+}
