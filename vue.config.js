@@ -36,7 +36,8 @@ module.exports = {
       'vuex': 'Vuex',
       'element-ui': 'ELEMENT',
       'echarts':'echarts',
-    }
+      'jquery': '$',
+    };
     // 为生产环境修改配置...
     if( isProduct ){
       // 忽略生产环境打包的文件

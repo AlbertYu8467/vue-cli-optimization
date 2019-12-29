@@ -1,16 +1,16 @@
 <template>
-  <echartsDemo></echartsDemo>
+  <div id="home" class="fill-contain">
+
+  </div>
 </template>
 
 <script>
-import echartsDemo from 'cps/common/echartsDemo'
-export default {
-  components:{
-    echartsDemo
-  }
-}
+export default {}
 </script>
 
-<style lang="stylus" scoped>
-
+<style lang="scss" scoped>
+#home {
+  background: url("/images/index.jpeg") no-repeat;
+  background-size: cover; 
+}
 </style>

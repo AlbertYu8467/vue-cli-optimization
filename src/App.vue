@@ -34,7 +34,7 @@ export default {
     return {
       menus:[
         {name:'首页',path:'/home'},
-        {name:'项目',path:'/project'},
+        {name:'组件',path:'/component'},
       ]
     }
   },
