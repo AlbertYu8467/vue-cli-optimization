@@ -21,7 +21,8 @@ export default {
       labelList: [
         { name:'图表', path:'/component/echart', icon:'el-icon-s-data'},
         { name:'Ztree', path:'/component/ztree', icon:'el-icon-share'},
-        { name:'编辑器', path:'/component/editor', icon:'el-icon-edit'},
+        { name:'编辑器wang', path:'/component/editorWang', icon:'el-icon-edit'},
+        { name:'编辑器quill', path:'/component/editorQuill', icon:'el-icon-edit'},
       ]
     }
   },

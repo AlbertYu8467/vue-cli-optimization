@@ -2,7 +2,8 @@ const Home = () => import(/* webpackChunkName: "Home" */ 'cps/Home')
 const Page404 = () => import(/* webpackChunkName: "Page404" */ 'cps/Page404')
 const Component = () => import(/* webpackChunkName: "Component" */ 'cps/Component');
 const Echart = () => import(/* webpackChunkName: "Echart" */ 'cps/Echart');
-const Editor = () => import(/* webpackChunkName: "Editor" */ 'cps/Editor');
+const EditorWang = () => import(/* webpackChunkName: "EditorWang" */ 'cps/EditorWang');
+const EditorQuill = () => import(/* webpackChunkName: "EditorQuill" */ 'cps/EditorQuill');
 const Ztree = () => import(/* webpackChunkName: "Ztree" */ 'cps/Ztree');
 
 
@@ -28,9 +29,14 @@ const routes = [
         component:Echart,
       },
       {
-        path:'editor',
-        name:'Editor',
-        component:Editor,
+        path:'editorWang',
+        name:'EditorWang',
+        component:EditorWang,
+      },
+      {
+        path:'editorQuill',
+        name:'EditorQuill',
+        component:EditorQuill,
       },
       {
         path:'ztree',

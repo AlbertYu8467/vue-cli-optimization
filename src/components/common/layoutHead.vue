@@ -23,6 +23,7 @@ export default {
     height: $head-height;
     background: $head-bg;
     color: #fff;
+    z-index:9999;
     .head-right {
       flex:1;
       display: flex;
